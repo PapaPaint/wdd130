@@ -5,12 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Rock+Salt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 #content {
     max-width: 1600px;
     margin: 0 auto;
@@ -61,7 +55,6 @@ div img {
 body {
     max-width: 960px;
     margin: 0 auto;
-    padding: 4em;
     font-size: 18px;
     text-align: center;
     font-family: sans-serif;
@@ -79,6 +72,7 @@ header {
     color: #EEEFA8;
     background-color: #2D2A32;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
 }
 
 header > h1, header > h2 {
