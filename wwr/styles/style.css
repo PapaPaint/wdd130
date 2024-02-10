@@ -1,8 +1,26 @@
 /* WWR CSS Style */
+/* Font @import*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 #content {
     max-width: 1600px;
     margin: 0 auto;
     text-align: center;
+    min-height: 100vh;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 /*#background {
@@ -22,10 +40,19 @@ div img {
     width: 100%;
 }
 
-section img {
+.card-img {
     display: block;
     margin: 0 auto;
     width: 60%;
+    border: 5px Solid #2D2A32;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.icon {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
     border: 10px #2D2A32;
     box-sizing: border-box;
     border-radius: 50%;
@@ -40,7 +67,7 @@ body {
     font-family: sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
     font-family: "Bebas Neue";
     color: #2D2A32;
     text-align: center;
@@ -73,13 +100,13 @@ p {
 }
 
 section.Quote p {
-    font-family: PT-Serif, Helvetica, sans-serif;
+    font-family: 'Protest Riot', Helvetica, sans-serif;
+    font-size: 1.75em;
     color: #2D2A32;
     padding: 10px;
     background-color: #EEEFA8;
-    border: 10px #2D2A32;
+    border: 5px Solid #2D2A32;
     box-sizing: border-box;
-    border-radius: 50%;
 }
 
 nav {
@@ -108,6 +135,8 @@ nav a:hover {
 
 .msg {
     background-color: #2D2A32;
+    line-height: 1.5em;
+    margin-bottom: 2rem;
 }
 
 .msg h2 {
@@ -117,6 +146,8 @@ nav a:hover {
 .msg p {
     color: #EEEFA8;
     padding: 1em;
+    font-family: 'Protest Riot', Helvetica, sans-serif;
+    font-size: 1.25em;
 }
 
 .msg a {
@@ -125,9 +156,6 @@ nav a:hover {
 
 .msg a:hover {
     color: #DDD92A;
-}
-.icon {
-    width: 80px;
 }
 
 footer {
@@ -150,13 +178,17 @@ footer p a:hover {
 }
 
 .social {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
 }
 
 .social a {
-    margin: 0 10px;
+    margin: 0 1rem;
 }
 
 .social img {
-    width: 5%;
+    width: 60px;
+    height: 60px;
 }
