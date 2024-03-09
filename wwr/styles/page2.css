@@ -45,106 +45,60 @@ header a img {
     align-self: center;
 }
 
-/*----------------HERO-----------------*/
-#hero-img {
-    width: 100%;
-}
-#hero{
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    margin-top: -100px;
-    margin-bottom: 200px;
-}
-#hero-box{
-    grid-column: 1/4;
-    grid-row: 1/3;
-    z-index: -1;
-}
-#hero-msg{
-    grid-column: 2/3;
-    grid-row: 1/2;
-    margin-top: 100px;
-}
-#hero-msg h1 {
-    text-align: center;
-    color: white;
-}
-#hero-msg h4 {
-    color: white;
-}
-#hero-msg div a{
-    color: #2D2A32;
-}
-#hero-msg div a:hover{
-    color: #6f7364;
-}
-#hero-msg h1,#hero-msg div,.button-box,main section {
-    text-align: center;
-}
-
-div img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-}
-
-/*--------------CARD IMG---------------*/
-.card-img {
-    border: 10px Solid #2D2A32;
-    transition: transform .5s;
+/*----------------TITLE-----------------*/
+.title {
+    width: 25%;
+    background-color: #EEEFA8;
     box-shadow: 5px 5px 10px #6f7364;
+    border: 2px solid #2D2A32;
+    display: grid;
+    place-items: center;
+    margin: 25px auto;
 }
-.card-img:hover{
-    opacity: .6;
-    transform: scale(1.1);
+.title h1 {
+    text-align: center;
+    font-size: 20px;
+    color: #2D2A32;
+    margin:  0;
 }
+
+/*--------------HOME GRID---------------*/
 .home-grid {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.main section img {
-    box-sizing: border-box;
-}
-.rivers-card{
-    grid-column: 2/4;
-    grid-row: 2/3;
-}
-.camping-card{
-    grid-column: 5/7;
-    grid-row: 2/3;
-}
-.rapids-card{
-    grid-column: 8/10;
-    grid-row: 2/3;
-}
-.card-img,.mountains {
-    width: 100%;
-}
-.mountains {
-    grid-column: 2/7;
-    grid-row: 5/8;
-    box-shadow: 5px 5px 10px #6f7364;
-    margin-top: 200px;
-}
-#background{
-    height: 725px;
-    background-color: #EEEFA8;
-    grid-column: 1/11;
-    grid-row: 4/9;
-    margin-top: 200px;
+    justify-content: center;
+    padding: 20px;
 }
 
-.icon {
-    display: block;
-    margin: 0 auto;
-    width: 80px;
-    padding-top: 10px;
-    border: 10px #2D2A32;
-    box-sizing: border-box;
-    border-radius: 50%;
+.river-section {
+    display: flex;
+    align-items: center;
+    background-color: #EEEFA8; /* Background for each river section */
+    border: 2px solid #2D2A32; /* Border for each river section */
+    padding: 80px;
+    margin-bottom: 20px;
 }
+.river-details {
+    position: relative;
+    left: 20px;
+    text-align: center;
+    background-color: #2D2A32;
+    box-shadow: 5px 5px 10px #6f7364;
+    
+}
+.river-details h2 {
+    margin-top: 0;
+    color: #EEEFA8;
+}
+.river-details p {
+    margin: 5px 0;
+    color: #EEEFA8;
+}
+.river-section img {
+    width: 60%;
+    height: auto;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
 
 body {
     background-color: white;
@@ -163,7 +117,7 @@ h3, h4, h5, h6 {
 header {
     display: grid;
     grid-template-columns: 150px auto;
-    background-color: rgba(45, 42, 50, 0.5);
+    background-color: rgba(45, 42, 50);
 }
 
 h1 {
@@ -202,47 +156,11 @@ nav a:hover,.book:hover,.join:hover {
     background-color: #2D2A32;
 }
 
-/*------------MSG--------------*/
-.msg{
-    background-color: #2D2A32;
-    line-height: 1.5em;
-    padding: 35px;
-    grid-column: 6/10;
-    grid-row: 6/7;
-    box-shadow: 5px 5px 10px #6f7364;
-}
-.msg h2 {
-    color: #EEEFA8;
-}
-.msg p {
-    color: #EEEFA8;
-    font-family: 'Protest Riot', Helvetica, sans-serif;
-    font-size: .8em;
-    padding-bottom: 15px;
-}
-.msg a {
-    color: #2D2A32;
-}
-.msg a:hover {
-    color: #6f7364;
-}
-
-/*---------BOOK & JOIN---------*/
-.book,.join {
-    background-color: #EEEFA8;
-    color: #2D2A32;
-    text-decoration: none;
-    text-align: center;
-    padding: 15px 30px;
-    margin-top: 50px;
-    border-radius: 5px;
-}
-
 /*------------FOOTER-------------*/
 footer {
     background-color: #2D2A32;
     padding: 25px 50px;
-    margin-top: 200px;
+    margin-top: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
