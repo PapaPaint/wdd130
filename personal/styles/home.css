@@ -52,10 +52,10 @@ nav a {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 nav a:link, nav a:visited {
-    color: #406E8E;
+    color: #8EA8C3;
 }
 nav a:hover {
-    color: #8EA8C3;
+    color: white;
     background-color: #23395B;
 }
 
@@ -89,6 +89,7 @@ p {
     background-color: #406E8E;
     border: solid #161925 1px;
     box-shadow: 5px 5px 10px #6f7364;
+    padding: 5px;
 }
 .msg p {
     text-align: center;
@@ -242,16 +243,16 @@ footer a {
 }
 footer p {
     font-size: 1.2em;
-    color: #406E8E;
+    color: #8EA8C3;
 }
 footer p a {
-    color: #406E8E;
+    color: #8EA8C3;
 }
 footer p a:hover {
     text-decoration: underline;
 }
 footer a:hover {
-    color: #8EA8C3;
+    color: white;
 }
 
 /*------------SOCIAL & ABOUT US-------------*/
