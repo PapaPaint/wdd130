@@ -1,0 +1,397 @@
+/*-------------------HOME PAGE-----------------------*/
+/* Personal Site CSS Style */
+/* Font @import */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+/*-------------------HEADER--------------------------*/
+header {
+    grid-row: 1;
+    z-index: 1;
+}
+header a img {
+    grid-template-columns: 1fr;
+}
+header {
+    display: grid;
+    grid-template-columns: 150px auto;
+    background-color: #161925;
+}
+/*-------------------LOGO---------------------------*/
+.logo {
+    width: 80px;
+    padding: 10px;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+.logo:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+#logo_link{
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+/*-------------------NAV----------------------------*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #161925;
+}
+nav a {
+    text-align: center;
+    color: #23395B;
+    text-decoration: none;
+    padding: 35px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav a:link, nav a:visited {
+    color: #8EA8C3;
+}
+nav a:hover {
+    color: white;
+    background-color: #23395B;
+}
+
+/*--------------------CONTENT-------------------------*/
+/*--------------------FONTS---------------------------*/
+h1 {
+    font-family: "Oswald", serif, sans-serif;
+}
+h2 {
+    font-family: serif;
+}
+p {
+    font-family: "Roboto Condensed", Lato, Helvetica, sans-serif;
+}
+
+/*-----------------------HOME-GRID---------------------*/
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    max-width: 1200px;
+}
+
+.home-grid .pc-insides img,
+.home-grid .pc-gpu img {
+    width: 100%;
+    max-width: 100%;
+    height: auto; 
+    margin: 20px;
+    border: solid #161925 2px;
+    height: 250px;
+}
+
+.home-grid .pc-insides img:hover,
+.home-grid .pc-gpu img:hover {
+    transform: scale(1.1);
+}
+
+.home-grid .container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .home-grid .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .home-grid .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .home-grid .container:hover .image {
+    opacity: 0.3;
+  }
+  
+  .home-grid .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .home-grid .text {
+    background-color: #23395B;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    min-height: 100dvh; /*Supports mobile use*/
+}
+main {
+    grid-row: 2;
+}
+
+/*-----------------SERVICE OVERVIEW---------------*/
+#services-overview {
+    background-color: #8EA8C3;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+    border: solid #161925 2px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+#services-overview p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/*-----------------GALLERY------------------*/
+#gallery {
+    background-color: #23395B;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxed {
+    border: 2px solid #161925;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-img {
+    width: 200px;
+    height: auto;
+    border: solid #161925 2px;
+}
+
+.gallery-text {
+    max-width: calc(50% - 10px);
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.6em;
+    border: solid #161925 2px;
+    background-color: #8EA8C3;
+}
+
+/*----------------MODAL-------------------*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*-----------------REPAIR AND CUSTOM BUILD PRICES------------------*/
+#prices {
+    display: flex;
+    gap: 20px;
+    max-width: 1240px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.price-section {
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #161925;
+    background-color: #8EA8C3;
+}
+
+.repair-price {
+    border: solid #161925 2px;
+    background-color: #8EA8C3;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+.custom-price {
+    border: solid #161925 2px;
+    background-color: #8EA8C3;
+    padding: 10px;
+    margin-left: 50px;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+/*----------------REQUEST SERVICE-----------------*/
+.request {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    background-color: #8EA8C3;
+    color: #161925;
+    text-decoration: none;
+    border: 2px solid #161925;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+.request:hover {
+    background-color: #23395B;
+    color: white;
+}
+
+/*-----------------FOOTER------------------*/
+footer {
+    background-color: #161925;
+    padding: 25px 50px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+}
+footer a {
+    color: #23395B;
+    text-decoration: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+}
+footer p {
+    font-size: 1.2em;
+    color: #8EA8C3;
+}
+footer p a {
+    color: #8EA8C3;
+}
+footer p a:hover {
+    text-decoration: underline;
+}
+footer a:hover {
+    color: white;
+}
+
+/*------------SOCIAL & ABOUT US-------------*/
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.social a {
+    margin: 0 1rem;
+}
+.social img {
+    width: 60px;
+    height: 60px;
+    padding-top: 15px;
+}
+.social img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+@media screen and (max-width: 900px) {
+    #hero, .home-grid {
+        display: block;
+        height: auto;
+    }
+    nav, footer {
+        flex-direction: column;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+    #hero {
+        margin-top: 0;
+    }
+    #hero-msg {
+        margin-top: 0;
+    }
+    #hero-msg h4 {
+        display: none;
+    }
+    #hero-msg h1 {
+        color: #6f7364;
+    }
+    .home-title {
+        font-size: 25px;
+    }
+    .rivers-card, .camping-card, .rapids-card { 
+        margin: 50px auto;
+        width: 60%;
+    }
+    #background {
+        display: none;
+    }
+    .mountains, .msg {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    footer {
+        margin-top: 25px;
+    }
+}

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Repairs and Creation | Tech Forge Repairs | Home</title>
-    <link rel="stylesheet" href="#">
+    <link rel="stylesheet" href="styles/services.css">
 </head>
 <body>
     <div id="content">
         <header>
             <a id="logo_link" href="home.html">
-                <img class="logo" src="images/logo.jpeg" alt="Tech Forge Repairs Logo">
+                <img class="logo" src="images/logo.jpg" alt="Tech Forge Repairs Logo">
             </a>
             <nav>
                 <a href="home.html">Home</a>
@@ -21,12 +21,20 @@
         </header>
         <main class="home-grid">
             <section class="pc-insides">
-                <img class="card-img" src="images/computer_05.jpg" alt="the inside of a pc">
-                <h1>Repairs</h1>
+                <div class="container">
+                    <img class="image" src="images/computer_05.jpg" alt="the inside of a pc" style="width:100%">
+                    <div class="middle">
+                        <div class="text">Repairs</div>
+                    </div>
+                </div>
             </section>
             <section class="pc-gpu">
-                <img class="card-img" src="images/computer_06.jpg" alt="plugging in a graphics card">
-                <h1>Custom PC</h1>
+                <div class="container">
+                    <img class="image" src="images/computer_06.jpg" alt="plugging in a graphics card" style="width:100%">
+                    <div class="middle">
+                        <div class="text">Custom PC</div>
+                    </div>
+                </div>
             </section>
         </main>
         <div id="services-overview">
@@ -37,30 +45,26 @@
                 Click below to learn more about what Tech Forge Repairs can do for you.
             </p>
         </div>
-        <div id="gallery">
-            <div id="built-gallery">
-                <img class="gallery-img" src="images/gallery_01.jpg" alt="pc being built">
+        <div id="gallery" class="boxed">
+            <div class="gallery-container">
+                <img class="gallery-img" src="images/gallery_01.jpg" alt="pc being built" onclick="openModal('images/gallery_01.jpg')">
+                <img class="gallery-img" src="images/gallery_02.jpg" alt="inside of pc looking at cpu cooler and gpu" onclick="openModal('images/gallery_02.jpg')">
+                <img class="gallery-img" src="images/gallery_03.jpg" alt="cpu being installed" onclick="openModal('images/gallery_03.jpg')">
+                <img class="gallery-img" src="images/gallery_04.jpg" alt="ram sticks installed" onclick="openModal('images/gallery_04.jpg')">
             </div>
-            <div id="inside-gallery">
-                <img class="gallery-img" src="images/gallery_02.jpg" alt="inside of pc looking at cpu cooler and gpu">
+            <div class="gallery-text">
+                <p>
+                    Embark on a journey to create your perfect computing companion with 
+                    our custom PC build process. At Tech Forge Repairs, we understand 
+                    that every individual has unique needs and preferences when it comes 
+                    to their PC. Our meticulous process ensures that we tailor every 
+                    aspect of your build to your specifications, from selecting the ideal 
+                    components to optimizing performance and aesthetics. With our 
+                    expertise and attention to detail, we'll guide you through every 
+                    step of the journey, ensuring that your dream PC becomes a reality. 
+                    Discover the thrill of owning a custom-built PC crafted just for you.
+                </p>
             </div>
-            <div id="cpu-gallery">
-                <img class="gallery-img" src="images/gallery_03.jpg" alt="cpu being installed">
-            </div>
-            <div id="ram-gallery">
-                <img class="gallery-img" src="images/gallery_04.jpg" alt="ram sticks installed">
-            </div>
-            <p>
-                Embark on a journey to create your perfect computing companion with 
-                our custom PC build process. At Tech Forge Repairs, we understand 
-                that every individual has unique needs and preferences when it comes 
-                to their PC. Our meticulous process ensures that we tailor every 
-                aspect of your build to your specifications, from selecting the ideal 
-                components to optimizing performance and aesthetics. With our 
-                expertise and attention to detail, we'll guide you through every 
-                step of the journey, ensuring that your dream PC becomes a reality. 
-                Discover the thrill of owning a custom-built PC crafted just for you.
-            </p>
         </div>
         <div id="prices">
             <section class="repair-price">
@@ -68,7 +72,7 @@
                 <p>Diagnostic Fee: $50.00</p>
                 <p>Virus/Spyware Removal: $80.00</p>
                 <p>Operating System Installation/Reinstallation: $100.00</p>
-                <p>Hardware Replacement (per component):</p>
+                <h3>Hardware Replacement (per component):</h3>
                 <p>RAM Upgrade: $50.00 - $100.00</p>
                 <p>Hard Drive Replacement: $80.00 - $150.00</p>
                 <p>Power Supply Replacement: $60.00 - $120.00</p>
@@ -81,11 +85,14 @@
                 <p>Mid-Range Custom Build: Starting at $800.00 (Includes consultation, assembly, and mid-range components)</p>
                 <p>High-End Custom Build: Starting at $1200.00 (Includes consultation, assembly, and high-end components)</p>
                 <p>Custom Water-Cooled Build: Starting at $1500.00 (Includes consultation, assembly, and specialized water-cooling setup)</p>
+                <p>Ultra Gaming PC: Starting at $2000.00 (Includes consultation, assembly, high-end gaming components, RGB lighting setup)</p>
+                <p>Professional Workstation: Starting at $1800.00 (Includes consultation, assembly, workstation-grade components, dual-monitor support)</p>
+                <p>Silent PC Build: Starting at $1000.00 (Includes consultation, assembly, noise-dampening components, silent cooling solution)</p>
             </section>
         </div>
-        <section class="request">
-            <a href="contactus.html"><h1>Request Service</h1></a>
-        </section>
+        <a href="contactus.html" class="request">
+            <h1>Request Service</h1>
+        </a>
         <footer>
             <p>Tech Forge Repairs &copy; 2024 - Riley Pierce</p>
             <p><a href="site-plan-personal.html">Site Plan</a></p>
@@ -103,5 +110,23 @@
             </div>
         </footer>
     </div>
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+      </div>
+    <script>
+        // Open the modal with the clicked image
+        function openModal(imgSrc) {
+            var modal = document.getElementById('myModal');
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+        }
+        
+        // Close the modal
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+    </script>
 </body>
 </html>
